@@ -1,0 +1,86 @@
+{
+  "reportes": [
+    {
+      "reefer": "MSCU10203040",
+      "fecha": "2024-09-14",
+      "locacion": "Callao",
+      "ano": "2013",
+      "tecnico": "Hernan Tito",
+      "tipomaq": "MQ",
+      "modelo": "CCSS",
+      "serie": "123456",
+      "tempera": "34",
+      "estado": "OK",
+      "ivisual": "XXXXXXXX",
+      "ielect": "XXXXXXXX",
+      "cener": "XXXXXXXX",
+      "igas": "XXXXXXXX",
+      "icontrol": "XXXXXXXX",
+      "iunidad": "XXXXXXXX"
+    },
+    {
+      "reefer": "CXRU14151617",
+      "fecha": "2022-09-14",
+      "locacion": "Callao",
+      "ano": "2017",
+      "tecnico": "Luz Hernandez",
+      "tipomaq": "MQ",
+      "modelo": "CCSS",
+      "serie": "123456",
+      "tempera": "34",
+      "estado": "INOPERATIVO",
+      "ivisual": "XXXXXXXX",
+      "ielect": "XXXXXXXX",
+      "cener": "XXXXXXXX",
+      "igas": "XXXXXXXX",
+      "icontrol": "XXXXXXXX",
+      "iunidad": "XXXXXXXX"
+    },
+    {
+      "reefer": "TTNU13246578",
+      "fecha": "2021-09-14",
+      "locacion": "Callao",
+      "ano": "2013",
+      "tecnico": "Claudia Doig",
+      "tipomaq": "MQ",
+      "modelo": "CCSS",
+      "serie": "123456",
+      "tempera": "34",
+      "estado": "POR APROBAR",
+      "ivisual": "XXXXXXXX",
+      "ielect": "XXXXXXXX",
+      "cener": "XXXXXXXX",
+      "igas": "XXXXXXXX",
+      "icontrol": "XXXXXXXX",
+      "iunidad": "XXXXXXXX"
+    },
+    {
+      "reefer": "CLXU90807060",
+      "fecha": "2023-09-14",
+      "locacion": "Callao",
+      "ano": "2013",
+      "tecnico": "Maria Quispe",
+      "tipomaq": "MQ",
+      "modelo": "CCSS",
+      "serie": "123456",
+      "tempera": "34",
+      "estado": "OK",
+      "ivisual": "XXXXXXXX",
+      "ielect": "XXXXXXXX",
+      "cener": "XXXXXXXX",
+      "igas": "XXXXXXXX",
+      "icontrol": "XXXXXXXX",
+      "iunidad": "XXXXXXXX"
+    }
+  ],
+  "nav": [
+    {
+      "name": "Listado",
+      "path": "/listado"
+    },
+    {
+      "name": "Registrar",
+      "path": "/registro"
+    }
+  ]
+}

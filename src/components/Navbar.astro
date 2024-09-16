@@ -1,0 +1,146 @@
+---
+//import Sidebar from "./Sidebar.astro"
+import { Image } from "astro:assets";
+import { nav } from "../config/data.json";
+---
+
+<nav class="absolute top-0 left-0 right-0 z-20">
+  <div class="container mx-auto">
+    <div class="flex justify-between py-3 px-3">
+      <div class="flex items-center lg:block">
+        
+          <!-- <img
+      src="/images/logo-white.png"
+      alt="logo versel"
+      width="248"
+      height="60"
+     /> -->
+          <Image
+            src={`/logo.webp`}
+            alt="logo Iolatam"
+            width={126}
+            height={42}
+            format="svg"
+            quality={100}
+          />
+       
+      </div>
+      <div class="lg:flex items-center hidden">
+        <!-- <Link /> -->
+      </div>
+      <div class="relative z-50 flex items-center lg:hidden">
+        <button
+          id="toggle-btn"
+          aria-label="toggle-btn"
+          class="h-10 w-10 text-slate-900"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+<div id="sidebar">
+  <div class="relative mt-6 flex-1 px-4 sm:px-6">
+    {/* Your content */}
+    <div class="flex justify-between">
+      
+        <img src="/logo.webp" alt="LOGO TRANSREE" width="150px" height="32px" />
+      
+      <button
+        id="btn-close"
+        aria-label="btn-close"
+        class="closeBtn w-10 h-10 text-slate-900"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18 18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="mt-5">
+      <ul class="ml-5">
+        {
+          nav.map((item) => (
+            <li class=" font-semibold cursor-pointer mb-3">
+              <a
+                class=" block text-slate-900 hover:text-[#EA111A] py-3"
+                href={item.path}
+              >
+                {item.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="overlay" class=""></div>
+
+<style>
+  #sidebar {
+    background-color: white;
+
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+    left: -100vw;
+    top: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  #sidebar.active {
+    left: 0;
+  }
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 40;
+    width: 100vw;
+    height: 100vh;
+    background-color: #293651;
+    opacity: 0.5;
+    transition: all 0.5s ease-in-out;
+  }
+</style>
+
+<script>
+  const toggleBtn = document.getElementById("toggle-btn") as HTMLElement;
+  const btnClose = document.getElementById("btn-close") as HTMLElement;
+  const sidebar = document.getElementById("sidebar") as HTMLElement;
+  const overlay = document.getElementById("overlay") as HTMLElement;
+
+  toggleBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("active");
+    overlay.classList.toggle("modal-backdrop");
+  });
+
+  btnClose.addEventListener("click", () => {
+    sidebar.classList.remove("active");
+    overlay.classList.remove("modal-backdrop");
+  });
+</script>

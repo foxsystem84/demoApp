@@ -1,0 +1,77 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { reportes } from "../config/data.json";
+---
+
+<Layout title="Listado PTI's">
+  <div class="w-full max-w-lg p-4 mt-20">
+    <h2 class="text-center text-2xl">Listado de PTI's</h2>
+    {
+      reportes.map((reporte) => (
+        <div class="bg-gray-100 rounded-lg mt-6 py-4 px-4">
+          <div class="flex justify-between gap-2">
+            <div class="flex flex-row gap-2">
+              <span class="text-gray-600 font-bold">Reefer:</span>
+              <p class="text-gray-600">{reporte.reefer}</p>
+            </div>
+            <div class="flex flex-row gap-2">
+              <span class="text-gray-600 font-bold">Fecha:</span>
+              <p class="text-gray-600">{reporte.fecha}</p>
+            </div>
+          </div>
+          <div class="flex justify-between gap-2">
+            <div class="flex flex-row gap-2">
+              <span class="text-gray-600 font-bold">Locación:</span>
+              <p class="text-gray-600">{reporte.locacion}</p>
+            </div>
+            <div class="flex flex-row gap-2">
+              <span class="text-gray-600 font-bold">Año:</span>
+              <p class="text-gray-600">{reporte.ano}</p>
+            </div>
+          </div>
+          <div class="flex justify-between gap-2">
+            <div class="flex flex-row gap-2">
+              <span class="text-gray-600 font-bold">Técnico:</span>
+              <p class="text-gray-600">{reporte.tecnico}</p>
+            </div>
+            <div class="flex flex-row gap-2">
+              <span class="text-gray-600 font-bold">I. Visual:</span>
+              <p class="text-gray-600">{reporte.ivisual}</p>
+            </div>
+          </div>
+          <div class="flex justify-between gap-2">
+            <div class="flex flex-row gap-2">
+              <span class="text-gray-600 font-bold">I. Elect:</span>
+              <p class="text-gray-600">{reporte.ielect}</p>
+            </div>
+            <div class="flex flex-row gap-2">
+              <span class="text-gray-600 font-bold">C. Ener:</span>
+              <p class="text-gray-600">{reporte.cener}</p>
+            </div>
+          </div>
+          <div class="flex justify-between gap-2">
+            <div class="flex flex-row gap-2">
+              <span class="text-gray-600 font-bold">I. Gas:</span>
+              <p class="text-gray-600">{reporte.igas}</p>
+            </div>
+            <div class="flex flex-row gap-2">
+              <span class="text-gray-600 font-bold">I. Control:</span>
+              <p class="text-gray-600">{reporte.icontrol}</p>
+            </div>
+          </div>
+          <div class="flex justify-between gap-2">
+            <div class="flex flex-row gap-2">
+              <span class="text-gray-600 font-bold">I. Unidad:</span>
+              <p class="text-gray-600">{reporte.iunidad}</p>
+            </div>
+          </div>
+          <div class="flex flex-row justify-end gap-2">
+            <span>Editar</span>
+            <span>Eliminar</span>
+            <span>Imprimir</span>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</Layout>
