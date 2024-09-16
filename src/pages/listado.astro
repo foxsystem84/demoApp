@@ -6,6 +6,11 @@ import { reportes } from "../config/data.json";
 <Layout title="Listado PTI's">
   <div class="w-full max-w-lg p-4 mt-20">
     <h2 class="text-center text-2xl">Listado de PTI's</h2>
+    <div class=" flex items-center justify-center gap-2 mt-4">
+        <p>Reefer:</p>
+        <input type="text" class=" h-8 w-32 px-3 py-2 mb-1 border"/>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Buscar</button>
+    </div>
     {
       reportes.map((reporte) => (
         <div class="bg-gray-100 rounded-lg mt-6 py-4 px-4">
